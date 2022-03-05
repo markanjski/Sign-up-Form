@@ -5,23 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Paragliding Club</title>
 </head>
 
 <body>
     <div id="container">
-        <div id="logoAndImg">
+        <div id="logoAndImg" class="logoAndImg d-none">
             <div id="logo">
-                <img src="images/icon.png" alt="" height="150px">
+                <img src="images/icon.png" alt="">
                 <h1>Paragliding Club</h1>
 
 
@@ -30,28 +27,51 @@
 
         </div>
         <div id="formDiv">
-            <h2>Join Us Today!</h2>
-            <p id="bla">Aerial Paragliding offers an unmatched learning environment with our award-winning instructors.
-                We provide our students
-                with natural and safe progress into the sport of paragliding
-
-
+            <p id="bla">Our Club offers an unmatched learning environment with our award-winning instructors. We provide our students with natural and safe progress into the sport of paragliding
             </p>
-            <form action="" method="post">
-                
-                <label for="fname">First Name</label>
-                <input type="text" name="fname" id="fname">
-                <label for="lname">Last Name</label>
-                <input type="text" name="lname" id="fname">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <label for="phone">Phone number</label>
-                <input type="tel" name="phone" id="phone">
-                <label for="password1">Password</label>
-                <input type="password" name="password1" id="password1">
-                <label for="password2">Confirm password</label>
-                <input type="password" name="password2" id="password2">
+            <h2>Sign in and join us today!</h2>
+            <form action="" method="get">
+                <div class="inputField">
 
+                    <input type="text" name="fname" id="fname" title="Please enter your name" placeholder="" autocomplete="off" required>
+                    <label for="fname">&nbsp;First Name&nbsp;</label>
+                </div>
+                <div class="inputField">
+
+                    <input type="text" name="lname" id="lname" placeholder="" autocomplete="off">
+                    <label for="lname">&nbsp;Last Name&nbsp;</label>
+
+                </div>
+                <div class="inputField">
+
+                    <input type="email" name="email" id="email" placeholder="" required>
+                    <label for="email">&nbsp;Email&nbsp;</label>
+                </div>
+                <div class="inputField">
+
+                    <input type="tel" name="phone" id="phone" placeholder="" autocomplete="off">
+                    <label for="phone">&nbsp;Phone number&nbsp;</label>
+                </div>
+
+                <div class="inputField">
+
+                    <input type="password" name="password1" id="password1" placeholder="" style="letter-spacing: 3px" required minlength="8">
+                    <label for="password1">&nbsp;Password&nbsp;</label>
+                </div>
+                <div class="inputField">
+
+                    <input type="password" name="password2" id="password2" placeholder="" style="letter-spacing: 3px" required minlength="8">
+                    <label for="password2">&nbsp;Confirm password&nbsp;</label>
+                </div>
+                <div id="resetDiv">
+                    <button type="reset" id="reset">Reset all fields</button>
+                </div>
+
+                <div class="inputField">
+                    <button type="submit" class="" id="submit">
+                        Sign In 
+                    </button>
+                </div>
             </form>
 
         </div>
