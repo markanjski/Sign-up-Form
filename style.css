@@ -105,18 +105,6 @@ video {
     box-sizing: border-box;
 }
 
-#test {
-    width: 100px;
-    height: 100px;
-    border: 2px solid red;
-}
-
-#test2 {
-    width: 100px;
-    height: 100px;
-    border: 20px solid black;
-}
-
 
 /* HTML5 display-role reset for older browsers */
 
@@ -171,32 +159,42 @@ body {
     flex-direction: column;
     width: 100%;
     /**************MAKE IT 100&******************/
-    min-height: 100vh;
+    /* min-height: 100vh; */
+}
+
+#logoImgContainer {
+    background-image: url(images/imgBlur.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .logoAndImg {
     color: white;
     /*min-height: 100vw;   REMOVE COMENT  */
-    height: 500px;
+    height: min(120vw, 80vh, 600px);
     background-image: url(images/img.jpg);
     background-size: cover;
     background-position: center top;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
+    margin: 0 auto;
+    width: min(500px, 100vw);
 }
 
 #logo {
     font-family: 'Kanit', sans-serif;
-    background-color: rgba(24, 112, 146, 0.541);
+    background-color: rgba(241, 252, 255, 0.582);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     font-size: 1.8em;
     font-weight: 600;
-    padding: 1em 0;
+    padding: 0.5em 3vw;
+    color: rgb(4, 65, 80);
+    border-radius: 4px;
 }
 
 #logo img {
@@ -205,11 +203,15 @@ body {
 
 h1 {
     text-align: center;
+    background: -webkit-linear-gradient(0deg, rgb(1, 62, 88) 5%, rgb(1, 155, 167) 50%, rgb(2, 62, 102) 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: calc(1vw + 25px);
 }
 
 #formDiv {
     background-color: rgb(250, 250, 250);
-    padding: 3em 1em;
+    padding: 5em 1em;
 }
 
 h2 {
@@ -269,7 +271,7 @@ form label {
     cursor: pointer;
     z-index: 9;
     display: inline;
-    pad: 0 1em;
+    padding: 0 0.5em;
     background-color: rgb(250, 250, 250);
     transition: all 0.3s;
 }
@@ -296,7 +298,8 @@ input:focus~label {
     font-size: 1.1em;
 }
 
-#submit:hover {
+#submit:hover,
+#submit:focus {
     background: rgb(8, 108, 136);
     background: linear-gradient(90deg, rgb(128, 190, 226) 20%, rgb(118, 216, 223) 80%);
     color: rgb(13, 83, 124);
@@ -324,6 +327,106 @@ input:focus~label {
     cursor: pointer;
 }
 
-#reset:hover {
+#reset:hover,
+#reset:focus {
     text-decoration: underline;
+}
+
+#logIn {
+    text-align: center;
+    max-width: 400px;
+    margin: 3em auto 0;
+    font-size: 0.95em;
+    line-height: 1.3em;
+}
+
+#logInA {
+    font-weight: 600;
+    border: inherit;
+    background: inherit;
+    color: rgb(7, 126, 180);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#logInA:hover,
+#logInA:focus {
+    text-decoration: underline;
+}
+
+
+/*********************FOOTER***********************/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    background-image: linear-gradient(75deg, rgb(1, 48, 75) 5%, rgb(1, 73, 80) 95%);
+}
+
+header {
+    height: 50px;
+    background-image: linear-gradient(75deg, rgb(1, 48, 75) 5%, rgb(1, 73, 80) 95%);
+}
+
+#footer-p a {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#madz span {
+    color: rgb(247, 182, 85);
+    font-weight: 500;
+}
+
+#madz:hover span {
+    color: rgb(189, 0, 0);
+}
+
+#madz:hover {
+    color: rgb(233, 182, 15);
+}
+
+
+/*************************** 1000px BREAKPOINT ***************************/
+
+@media (min-width: 1000px) {
+    #container {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    #logoImgContainer {
+        flex-grow: 1;
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .logoAndImg {
+        height: 100%;
+        width: 100%;
+    }
+    #formDiv {
+        flex-grow: 1;
+        flex-basis: 60%;
+    }
+    #bla {
+        max-width: 600px;
+        font-size: 1.1em;
+    }
+    #banner {
+        height: 100px;
+        background: linear-gradient(75deg, rgb(11, 100, 151) 20%, rgb(7, 142, 151) 80%);
+        margin-bottom: 4em;
+    }
+    form {}
+}
+
+
+/*****/
+
+input:-webkit-autofill {
+    -webkit-background-clip: text;
 }

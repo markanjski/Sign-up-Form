@@ -9,27 +9,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <title>Paragliding Club</title>
 </head>
 
 <body>
+    <header>
+
+
+
+
+
+    </header>
     <div id="container">
-        <div id="logoAndImg" class="logoAndImg d-none">
-            <div id="logo">
-                <img src="images/icon.png" alt="">
-                <h1>Paragliding Club</h1>
+        <div id="logoImgContainer">
+            <div id="logoAndImg" class="logoAndImg">
+                <div id="logo">
+                    <img src="images/icon.png" alt="">
+                    <h1>Paragliding Club</h1>
 
 
+                </div>
             </div>
-
-
         </div>
+
+
         <div id="formDiv">
+            <!-- <div id="banner"></div> -->
             <p id="bla">Our Club offers an unmatched learning environment with our award-winning instructors. We provide our students with natural and safe progress into the sport of paragliding
             </p>
-            <h2>Sign in and join us today!</h2>
+            <h2>Sign in and join us Today!</h2>
             <form action="" method="get">
                 <div class="inputField">
 
@@ -44,7 +55,7 @@
                 </div>
                 <div class="inputField">
 
-                    <input type="email" name="email" id="email" placeholder="" required>
+                    <input type="email" name="email" id="email" placeholder="" required autocomplete="off">
                     <label for="email">&nbsp;Email&nbsp;</label>
                 </div>
                 <div class="inputField">
@@ -55,12 +66,12 @@
 
                 <div class="inputField">
 
-                    <input type="password" name="password1" id="password1" placeholder="" style="letter-spacing: 3px" required minlength="8">
+                    <input type="password" name="password1" id="password1" placeholder="" style="letter-spacing: 3px" required minlength="8" autocomplete="off">
                     <label for="password1">&nbsp;Password&nbsp;</label>
                 </div>
                 <div class="inputField">
 
-                    <input type="password" name="password2" id="password2" placeholder="" style="letter-spacing: 3px" required minlength="8">
+                    <input type="password" name="password2" id="password2" placeholder="" style="letter-spacing: 3px" required minlength="8" autocomplete="off">
                     <label for="password2">&nbsp;Confirm password&nbsp;</label>
                 </div>
                 <div id="resetDiv">
@@ -73,13 +84,24 @@
                     </button>
                 </div>
             </form>
+            <p id="logIn">Already have an account? <a href="#" id="logInA" tabindex="0">Log In here.</a></p>
 
         </div>
 
 
     </div>
+    <footer>
+        <p id="footer-p" class="m-0 p-4 text-center">
+            <a href="mailto:marko.adzic2@gmail.com" id="madz" alt="marko.adzic2@gmail.com">
+            web by
+            <span> marko </span>
+            <i class="bi bi-cursor" style="vertical-align: bottom; font-size: 1.1em;"></i>            
+          </a>
+        </p>
+    </footer>
 
-
+    <!--     <script src="script.js"></script>
+ -->
 </body>
 
 </html>
